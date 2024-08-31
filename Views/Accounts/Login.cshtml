@@ -1,0 +1,17 @@
+﻿@model Account
+
+<form asp-controller="Accounts" asp-action="Register">
+    <div class="text-danger">@ViewBag.Error</div>
+    <div class="my-2">
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+
+    <div class="my-2">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+    </div>
+  
+    <button type="submit" class="btn btn-dark">Login</button>
+
+</form>

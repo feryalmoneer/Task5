@@ -1,0 +1,28 @@
+﻿@model List<Task5.Models.Account>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>UserId</td>
+            <td>UserName</td>
+            <td>CreateAt</td>
+            <td>IsActive</td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.UserName</td>
+                <td>@item.CreateAt</td>
+                <td><a class="text-decoration-none text-light" asp-controller="Accounts" asp-action="InActive" asp-route-id="@item.UserId">IsActive</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
